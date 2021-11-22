@@ -1,6 +1,28 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
+const Form = styled.form`
+	--input-indent: 10%;
+	width: 100%;
+
+	& label {
+		color: #555;
+		font-weight: bold;
+		margin-left: var(--input-indent);
+	}
+	& input {
+		margin: 0.2em var(--input-indent) 1em;
+	}
+`;
+
+export const Input = styled.input`
+	font-size: 1.3em;
+	display: block;
+	padding: 0.6em 0.8em;
+	width: 80%;
+	min-width: 100px;
+`;
+
+export const Button = styled.button`
 	--width: 200px;
 	font-size: 1.3em;
 	color: white;
@@ -24,4 +46,4 @@ const Button = styled.button`
 	}
 `;
 
-export default Button;
+export default Form;

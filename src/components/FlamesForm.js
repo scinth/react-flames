@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Input from './Input.styled';
-import Button from './Button.styled';
+import Form, { Input, Button } from './Form.styled';
 import { flames } from '../utils';
 
 export default function FlamesForm({ updateResults }) {
@@ -14,7 +13,7 @@ export default function FlamesForm({ updateResults }) {
 	}, [name1, name2]);
 
 	return (
-		<form
+		<Form
 			onSubmit={e => {
 				e.preventDefault();
 				if (name1 === '' || name2 === '') return;
@@ -31,6 +30,7 @@ export default function FlamesForm({ updateResults }) {
 				onChange={e => {
 					setName1(e.target.value);
 				}}
+				autoComplete="off"
 			/>
 			<label htmlFor="name2">Enter Name2</label>
 			<Input
@@ -39,8 +39,9 @@ export default function FlamesForm({ updateResults }) {
 				onChange={e => {
 					setName2(e.target.value);
 				}}
+				autoComplete="off"
 			/>
 			<Button disabled={isInvalidInput ? true : false}>Burn it!</Button>
-		</form>
+		</Form>
 	);
 }

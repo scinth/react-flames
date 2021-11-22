@@ -13,7 +13,7 @@ export default function App() {
 	return (
 		<>
 			<section title="form-section">
-				<h1 className="flames-title">
+				<h1 className="section-title flames-title">
 					<span>F</span>
 					<span>L</span>
 					<span>A</span>
@@ -24,7 +24,7 @@ export default function App() {
 				<FlamesForm updateResults={updateResults} />
 			</section>
 			<section title="results-section">
-				<h1 className="results-title">RESULTS</h1>
+				<h1 className="section-title results-title">RESULTS</h1>
 				<FlamesResults results={results} />
 			</section>
 		</>

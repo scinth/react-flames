@@ -37,7 +37,6 @@ export default function FlamesResults({ results }) {
 							= {result.name2Pairs.pairs}
 						</p>
 						<p className="total">Total = {result.total}</p>
-						<hr />
 						<p className="message">"They are {result.message}"</p>
 					</ResultCard>
 				);
